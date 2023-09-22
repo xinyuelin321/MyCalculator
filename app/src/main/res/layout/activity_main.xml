@@ -7,12 +7,93 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_centerHorizontal="true"
+        android:text="Calculator"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/calculate" />
+
+    <Button
+        android:id="@+id/buttonadd"
+        android:layout_width="81dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="244dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="add"/>
+
+    <Button
+        android:id="@+id/buttonminus"
+        android:layout_width="86dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="12dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonadd"
+        app:layout_constraintStart_toEndOf="@+id/buttonadd"
+        android:onClick="minus"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="92dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:text="*"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonminus"
+        app:layout_constraintStart_toEndOf="@+id/buttonminus"
+        android:onClick="multiply"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="86dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:text="%"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        android:onClick="divide"/>
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="52dp"
+        android:hint="Enter number 1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:hint="Enter number 2"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
